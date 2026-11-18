@@ -34,7 +34,7 @@ h3 { font-weight: 900; }
 .button-primary:hover { background: #a13d29; }
 .button .icon { width: 20px; height: 20px; }
 .hero { display: grid; grid-template-columns: 1.04fr 1fr; gap: 60px; align-items: center; padding-block: 70px 92px; }
-.hero-copy { position: relative; z-index: 1; }
+.hero-copy { position: relative; z-index: 1; align-self: start; }
 .hero h1 { font-size: clamp(45px, 5.1vw, 66px); margin-block: 20px 22px; max-width: 12ch; }
 .hero h1 span { color: #37775f; background: linear-gradient(transparent 79%, #f3c65d80 79%, #f3c65d80 91%, transparent 91%); }
 .hero-intro { max-width: 46ch; font-size: 17px; color: var(--muted); line-height: 1.7; }
@@ -44,6 +44,10 @@ h3 { font-weight: 900; }
 .age-groups strong { font-size: 13px; font-weight: 900; }
 .hero-note { margin-top: 19px; font-size: 12px; color: var(--muted); }
 .hero-visual { position: relative; padding: 25px 29px 28px; min-width: 0; }
+.hero-media { min-width: 0; }
+.book-summary { margin: 15px 29px 0; padding-top: 22px; border-top: 1px solid var(--line); }
+.book-summary h2 { font-size: 25px; line-height: 1.2; letter-spacing: -0.02em; color: var(--green); }
+.book-summary p { margin-top: 12px; font-size: 14px; line-height: 1.75; color: var(--muted); }
 .hero-orbit { position: absolute; inset: 5% -2% 2%; border-radius: 48% 48% 43% 43%; background: #e5e8d7; transform: rotate(-7deg); }
 .hero-photo { position: relative; overflow: hidden; border-radius: 180px 180px 22px 22px; transform: rotate(3deg); border: 9px solid #fffcf5; box-shadow: 0 24px 48px -22px #273c3860; }
 .hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
@@ -176,6 +180,9 @@ button:disabled { cursor: wait; opacity: 0.65; transform: none; }
   .age-groups { margin-block: 21px 24px; gap: 23px; }
   .hero-note { font-size: 11px; margin-top: 16px; }
   .hero-visual { width: min(440px, 90%); margin-inline: auto; padding: 13px 20px 22px; }
+  .book-summary { margin: 24px 0 0; padding-top: 22px; }
+  .book-summary h2 { font-size: 26px; }
+  .book-summary p { font-size: 15px; }
   .hero-photo { border-width: 7px; border-radius: 160px 160px 18px 18px; }
   .hero-sun { width: 51px; height: 51px; right: 0; top: -6px; }
   .book-note { bottom: 28px; left: -10px; }
