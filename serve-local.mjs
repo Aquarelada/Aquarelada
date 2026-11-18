@@ -89,6 +89,22 @@ async function handleLocalMetaCapi(request, response) {
 
 loadLocalEnv();
 
+async function handleLocalSchoolLead(request, response) {
+  try {
+    const { POST, GET } = await import("./api/escolas.js");
+    const apiRequest = new Request(`http://127.0.0.1:4177${request.url}`, {
+      method: request.method,
+      headers: request.headers,
+      ...(request.method === "POST" ? { body: JSON.stringify(await readJsonBody(request)) } : {})
+    });
+    const result = request.method === "POST" ? await POST(apiRequest) : GET();
+    response.writeHead(result.status, Object.fromEntries(result.headers));
+    response.end(await result.text());
+  } catch {
+    sendJson(response, { error: "Não foi possível processar o formulário local." }, 500);
+  }
+}
+
 function mapUrl(url) {
   const parsed = new URL(url, "http://localhost");
   let pathname = decodeURIComponent(parsed.pathname);
@@ -113,6 +129,10 @@ function mapUrl(url) {
 }
 
 http.createServer((request, response) => {
+  if (new URL(request.url, "http://localhost").pathname === "/api/escolas") {
+    handleLocalSchoolLead(request, response);
+    return;
+  }
   if (request.url?.startsWith("/api/meta-capi")) {
     handleLocalMetaCapi(request, response);
     return;

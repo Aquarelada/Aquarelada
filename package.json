@@ -13,6 +13,7 @@
     "build": "echo 'No build step needed'",
     "start": "node serve-local.mjs",
     "validate": "node tools/validate-structure.mjs",
-    "check": "npm run build && npm run validate"
+    "check": "npm run build && npm run validate",
+    "test:escolas": "node --test tests/school-leads.test.mjs"
   }
 }

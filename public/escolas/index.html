@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/escolas.css?v=20261118-3">
-  <script src="/assets/js/escolas.js?v=20261118-2" defer></script>
+  <link rel="stylesheet" href="/assets/css/escolas.css?v=20261118-4">
+  <script src="/assets/js/escolas.js?v=20261118-4" defer></script>
 </head>
 <body>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -90,13 +90,38 @@
           <aside class="selection-notice" aria-labelledby="selection-title"><svg class="icon" aria-hidden="true"><use href="#gift"/></svg><div><h3 id="selection-title">Sua escola pode receber um exemplar físico gratuito para avaliação.</h3><p>Algumas escolas serão selecionadas após a análise dos cadastros. O preenchimento do formulário não garante o recebimento do livro.</p></div></aside>
         </div>
         <div class="form-card" aria-labelledby="form-title"><span class="form-kicker">Interesse no projeto</span><h3 id="form-title">Conte um pouco<br>sobre a sua escola.</h3>
-          <!-- Área reservada: inserir os campos e a integração após definição do formulário. -->
-          <div class="form-placeholder"><span class="placeholder-icon"><svg class="icon" aria-hidden="true"><use href="#pencil"/></svg></span><strong>Formulário em preparação</strong><p>Em breve, você poderá cadastrar o interesse da sua escola por aqui.</p></div>
+          <p class="form-description" id="school-form-description">Conheça o livro infantil “Um Dia Diferente, Como Era Antigamente!” e os materiais de apoio. Preencha seus dados para receber a apresentação completa e informações sobre as possibilidades de adoção escolar.</p>
+          <form id="school-form" action="/api/escolas" method="post" aria-labelledby="form-title" aria-describedby="school-form-description" novalidate>
+            <div class="form-progress"><span id="form-step-label" aria-live="polite">Etapa 1 de 3 · Seu perfil</span><span>Todos os campos são obrigatórios.</span><progress id="form-progress" value="1" max="3" aria-label="Progresso do cadastro"></progress></div>
+            <div class="form-step" data-step="0" aria-label="Seu perfil">
+            <fieldset class="form-question"><legend>1. Qual é o seu cargo na escola?</legend><div class="radio-options"><label class="radio-option"><input type="radio" name="role" value="professor" required><span>Professor(a)</span></label><label class="radio-option"><input type="radio" name="role" value="coordenador" required><span>Coordenador(a) pedagógico(a)</span></label><label class="radio-option"><input type="radio" name="role" value="diretor" required><span>Diretor(a)</span></label><label class="radio-option"><input type="radio" name="role" value="proprietario" required><span>Proprietário(a) / Mantenedor(a)</span></label></div></fieldset>
+            <fieldset class="form-question"><legend>2. A escola é:</legend><div class="radio-options radio-options-inline"><label class="radio-option"><input type="radio" name="schoolType" value="particular" required><span>Particular</span></label><label class="radio-option"><input type="radio" name="schoolType" value="publica" required><span>Pública</span></label></div></fieldset>
+            </div>
+            <div class="form-step" data-step="1" aria-label="Planejamento da escola" hidden>
+            <fieldset class="form-question"><legend>3. Quais segmentos a escola atende?</legend><div class="radio-options"><label class="radio-option"><input type="radio" name="segments" value="infantil" required><span>Somente Educação Infantil</span></label><label class="radio-option"><input type="radio" name="segments" value="fundamental-1" required><span>Somente Ensino Fundamental I (1º ao 5º ano)</span></label><label class="radio-option"><input type="radio" name="segments" value="ambos" required><span>Ambos</span></label></div></fieldset>
+            <fieldset class="form-question"><legend>4. A coordenação costuma avaliar livros paradidáticos para adotar e trabalhar com as turmas?</legend><div class="radio-options"><label class="radio-option"><input type="radio" name="evaluatesBooks" value="sim" required><span>Sim</span></label><label class="radio-option"><input type="radio" name="evaluatesBooks" value="metodo-definido" required><span>Não, já vem pré definido pelo método de ensino.</span></label></div></fieldset>
+            <fieldset class="form-question"><legend>5. Os livros paradidáticos para o próximo ano já foram escolhidos?</legend><div class="radio-options radio-options-inline"><label class="radio-option"><input type="radio" name="nextYearSelected" value="sim" required><span>Sim</span></label><label class="radio-option"><input type="radio" name="nextYearSelected" value="nao" required><span>Não</span></label></div></fieldset>
+            </div>
+            <div class="form-step" data-step="2" aria-label="Identificação e contato" hidden>
+              <div class="school-field"><label for="school-contact-name">Nome completo</label><input id="school-contact-name" name="name" autocomplete="name" minlength="2" maxlength="150" required></div>
+              <div class="school-field"><label for="school-name">Nome da escola</label><input id="school-name" name="schoolName" autocomplete="organization" minlength="2" maxlength="200" required></div>
+              <div class="school-field"><label for="school-whatsapp">WhatsApp (com DDD)</label><input id="school-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" maxlength="25" aria-describedby="phone-help" required><small id="phone-help">Informe o número pelo qual podemos falar com você.</small></div>
+              <div class="school-field"><label for="school-email">E-mail</label><input id="school-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required></div>
+              <p class="form-selection-note">O exemplar físico gratuito será enviado somente às escolas selecionadas após análise. O cadastro não garante o recebimento do livro.</p>
+              <p class="form-privacy">Ao enviar, você solicita contato sobre o projeto e declara estar ciente da <button type="button" class="text-button" id="open-privacy">Política de Privacidade</button>.</p>
+            </div>
+            <div class="form-honeypot" aria-hidden="true"><label>Deixe este campo vazio<input name="website" tabindex="-1" autocomplete="off"></label></div>
+            <p class="form-feedback" id="school-form-feedback" role="alert"></p>
+            <div class="form-actions"><button type="button" class="button-back" id="form-back" hidden>Voltar</button><button type="button" class="button button-primary" id="form-next">Continuar <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button><button type="submit" class="button button-primary" id="form-submit" hidden>Quero receber a apresentação <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button></div>
+            <noscript><p>Ative o JavaScript do navegador para preencher e enviar o cadastro.</p></noscript>
+          </form>
+          <div class="form-success" id="form-success" tabindex="-1" hidden><span class="success-icon" aria-hidden="true">✓</span><h4>Obrigado pelo interesse!</h4><p id="form-success-message"></p><p>O contato do autor será feito pelo WhatsApp <strong>(11) 98151-9590</strong>.</p></div>
         </div>
       </div>
       <footer class="footer section-shell"><img src="/assets/images/aquarelada-logo-alfa.webp" alt="Aquarelada Editora" width="1080" height="250" loading="lazy"><p>Histórias para ler. Experiências para viver junto.</p></footer>
     </section>
   </main>
+  <dialog id="privacy-dialog" class="privacy-dialog" aria-labelledby="privacy-dialog-title"><div class="privacy-dialog-header"><h2 id="privacy-dialog-title">Política de Privacidade</h2><button type="button" id="close-privacy" aria-label="Fechar política de privacidade">Fechar ×</button></div><iframe id="privacy-frame" title="Texto da Política de Privacidade da Aquarelada Editora" sandbox referrerpolicy="no-referrer"></iframe></dialog>
   <div class="mobile-action" id="mobile-action" hidden><a class="button button-primary" href="#cadastro">Quero conhecer o projeto <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
 </body>
 </html>

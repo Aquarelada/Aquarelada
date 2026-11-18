@@ -3,7 +3,7 @@
 ## Rotas
 
 - `/` -> `public/index.html`
-- `/escolas` -> `public/escolas/index.html` (landing page para escolas; estilos e script proprios em `assets/css/escolas.css` e `assets/js/escolas.js`; formulario aguardando definicao dos campos)
+- `/escolas` -> `public/escolas/index.html` (landing page para escolas; formulario em tres etapas, estilos e script proprios em `assets/css/escolas.css` e `assets/js/escolas.js`; envio por `POST /api/escolas`)
 - `/politicas` -> `public/politicas/index.html` (politica de privacidade; estilos proprios em `assets/css/politicas.css`)
 - `/livro/` -> `public/livro/index.html`
 - `/livro-v2/` -> `public/livro-v2/index.html`
