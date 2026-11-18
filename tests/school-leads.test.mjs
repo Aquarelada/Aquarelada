@@ -69,6 +69,7 @@ test("success emails every answer to the fixed recipient and confirms the author
   for (const [key, question] of Object.entries(SCHOOL_QUESTIONS)) assert.ok(notification.text.includes(question.options[fixture()[key]]));
   assert.ok(notification.text.includes("Escola de Teste"));
   assert.deepEqual(confirmation.to, ["teste@example.com"]);
+  assert.equal(confirmation.from, notification.from, "both emails use the same verified sender");
   assert.ok(confirmation.text.includes("Leandro Dimov"));
   assert.ok(confirmation.text.includes("(11) 98151-9590"));
   assert.ok(confirmation.text.includes("O cadastro não garante"));

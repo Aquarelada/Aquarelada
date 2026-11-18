@@ -10,7 +10,7 @@ Cinco perguntas de resposta unica (`role`, `schoolType`, `segments`, `evaluatesB
 
 - Notificacao com todas as respostas para `editora@aquarelada.com.br`, hospedado no Umbler. Responder a essa mensagem usa o e-mail do interessado.
 - Agradecimento para o interessado, informando que Leandro Dimov entrara em contato pelo WhatsApp (11) 98151-9590. A apresentacao nao e anexada nem enviada automaticamente.
-- Usa o Resend existente e as variaveis `RESEND_API_KEY`, `LEAD_FROM_EMAIL` e `LEAD_REPLY_FROM` (opcional) do projeto Vercel. Nao altera as configuracoes dos demais formularios ou do Umbler.
+- Usa o Resend existente e as variaveis `RESEND_API_KEY` e `LEAD_FROM_EMAIL` do projeto Vercel. Os dois e-mails usam o mesmo remetente validado; as respostas da confirmacao vao para `editora@aquarelada.com.br`. Nao altera as configuracoes dos demais formularios ou do Umbler.
 - O sucesso do cadastro exige aceite da notificacao pelo provedor de e-mail. Falhas mantem os dados preenchidos para uma nova tentativa. A confirmacao so e anunciada na tela quando aceita pelo provedor.
 
 ## Armazenamento e repeticao de envios
