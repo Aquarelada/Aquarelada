@@ -59,6 +59,11 @@ h1 {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
+.policy-updated {
+  color: #667085;
+  font-size: 0.95rem;
+}
+
 h2,
 h3 {
   margin: 32px 0 12px;
