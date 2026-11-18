@@ -3,6 +3,7 @@
 ## Rotas
 
 - `/` -> `public/index.html`
+- `/escolas` -> `public/escolas/index.html` (copia da pagina inicial; estilos e script proprios em `assets/css/escolas.css` e `assets/js/escolas.js`)
 - `/livro/` -> `public/livro/index.html`
 - `/livro-v2/` -> `public/livro-v2/index.html`
 - `/livro-escolas/` -> `public/livro-escolas/index.html`

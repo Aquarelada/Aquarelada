@@ -56,6 +56,10 @@
   ],
   "rewrites": [
     {
+      "source": "/escolas",
+      "destination": "/escolas/index.html"
+    },
+    {
       "source": "/livro-v2",
       "destination": "/livro-v2/index.html"
     },
