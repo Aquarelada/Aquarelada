@@ -1,0 +1,91 @@
+:root {
+  color: #243042;
+  background: #fffaf0;
+  font-family: "Nunito", "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(36, 48, 66, 0.14);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(1120px, calc(100% - 32px));
+  min-height: 96px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: inline-flex;
+  width: min(320px, 78vw);
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  max-height: 74px;
+  object-fit: contain;
+}
+
+.policy-content {
+  width: min(840px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 64px) 0 80px;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.policy-updated {
+  color: #667085;
+  font-size: 0.95rem;
+}
+
+h2,
+h3 {
+  margin: 32px 0 12px;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 20px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+.policy-content a {
+  color: #17617d;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid #17617d;
+  outline-offset: 5px;
+}

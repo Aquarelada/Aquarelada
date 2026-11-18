@@ -60,6 +60,10 @@
       "destination": "/escolas/index.html"
     },
     {
+      "source": "/politicas",
+      "destination": "/politicas/index.html"
+    },
+    {
       "source": "/livro-v2",
       "destination": "/livro-v2/index.html"
     },
