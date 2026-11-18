@@ -48,6 +48,7 @@ h3 { font-weight: 900; }
 .book-summary { margin: 15px 29px 0; padding-top: 22px; border-top: 1px solid var(--line); }
 .book-summary h2 { font-size: 25px; line-height: 1.2; letter-spacing: -0.02em; color: var(--green); }
 .book-summary p { margin-top: 12px; font-size: 14px; line-height: 1.75; color: var(--muted); }
+.book-story-image { width: 100%; margin-top: 22px; border-radius: 18px; }
 .hero-orbit { position: absolute; inset: 5% -2% 2%; border-radius: 48% 48% 43% 43%; background: #e5e8d7; transform: rotate(-7deg); }
 .hero-photo { position: relative; overflow: hidden; border-radius: 180px 180px 22px 22px; transform: rotate(3deg); border: 9px solid #fffcf5; box-shadow: 0 24px 48px -22px #273c3860; }
 .hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
