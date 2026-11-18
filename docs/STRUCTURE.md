@@ -3,6 +3,7 @@
 ## Rotas
 
 - `/` -> `public/index.html`
+- `/politicas` -> `public/politicas/index.html` (politica de privacidade; estilos proprios em `assets/css/politicas.css`)
 - `/livro/` -> `public/livro/index.html`
 - `/livro-v2/` -> `public/livro-v2/index.html`
 - `/livro-escolas/` -> `public/livro-escolas/index.html`
