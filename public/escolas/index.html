@@ -1,118 +1,102 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1084001627634199');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1084001627634199&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Escolas | Aquarelada Editora</title>
-  <meta name="description" content="Livros infantis ilustrados, histórias, brincadeiras e memórias para colorir a infância.">
-  <link rel="stylesheet" href="/assets/css/escolas.css?v=20261118-1">
+  <title>Um Dia Diferente na sua escola | Projeto paradidático</title>
+  <meta name="description" content="Conheça um projeto de leitura que conecta literatura, brincadeiras e participação das famílias, com materiais de apoio para Educação Infantil e Ensino Fundamental I.">
+  <meta name="theme-color" content="#faf6ec">
+  <link rel="icon" href="/assets/icons/app-icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/escolas.css?v=20261118-2">
+  <script src="/assets/js/escolas.js?v=20261118-2" defer></script>
 </head>
 <body>
-  <header class="site-header landing-header">
-    <div class="header-inner">
-      <a class="brand publisher-brand" href="/" aria-label="Aquarelada Editora">
-        <img class="publisher-brand-logo" src="/assets/images/aquarelada-logo.png" alt="Aquarelada Editora">
-      </a>
-    </div>
-  </header>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="book" viewBox="0 0 24 24"><path d="M12 6v15M3 4c4-1 7 0 9 2 2-2 5-3 9-2v15c-4-1-7 0-9 2-2-2-5-3-9-2z"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M21 11a9 9 0 0 1-9 9 10 10 0 0 1-4-.8L3 21l1.8-5A9 9 0 1 1 21 11zM8 10h8M8 14h5"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="guide" viewBox="0 0 24 24"><path d="M6 3h13v18H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM4 17h15M9 7h6M9 11h4"/></symbol>
+    <symbol id="gift" viewBox="0 0 24 24"><path d="M3 8h18v4H3zM5 12v9h14v-9M12 8v13M12 8C4 8 5 1 9 3c2 1 3 5 3 5s1-4 3-5c4-2 5 5-3 5z"/></symbol>
+    <symbol id="pencil" viewBox="0 0 24 24"><path d="M15 4l5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14zM4 14l5 5"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v2M12 21v2M1 12h2M21 12h2M4 4l2 2M18 18l2 2M4 20l2-2M18 6l2-2"/></symbol>
+  </svg>
 
   <main>
-    <section class="hero publisher-hero">
-      <div class="hero-inner hero-grid">
-        <div>
-          <h1>Histórias, brincadeiras e memórias para colorir a infância.</h1>
-          <p class="lead">A Aquarelada Editora nasceu para criar livros infantis ilustrados que despertam a imaginação e transformam a leitura em um momento compartilhado entre crianças e famílias.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#cadastro">Receber novidades</a>
-          </div>
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Projeto paradidático para escolas</p>
+        <h1 id="hero-title">Uma história para <span>aproximar a escola</span> e a família.</h1>
+        <p class="hero-intro">Com <strong>Um Dia Diferente, Como Era Antigamente!</strong>, a leitura ganha vida em conversas, descobertas e brincadeiras. E sua equipe conta com materiais de apoio para acompanhar essa jornada.</p>
+        <div class="age-groups" aria-label="Etapas de ensino">
+          <span><strong>Educação Infantil</strong> 4 e 5 anos</span>
+          <span><strong>Fundamental I</strong> 1º ao 5º ano</span>
         </div>
-
-        <article class="capture-box">
-          <h2>Nosso primeiro livro está chegando.</h2>
-          <p><strong>Um Dia Diferente, Como Era Antigamente!</strong> conta a história de dois irmãos, Enzo e Valentina, que passam um dia inteiro vivenciando brincadeiras que fizeram parte da infância dos pais.</p>
-          <p>Uma história criada para encantar as crianças de hoje e despertar lembranças especiais em quem já foi criança um dia.</p>
-          <img class="capture-box-book" src="/assets/images/aquarelada-livro-mesa.webp" alt="Livro Um Dia Diferente, Como Era Antigamente!, da Aquarelada Editora">
-        </article>
+        <a class="button button-primary" href="#cadastro" id="hero-cta">Quero conhecer o projeto <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+        <p class="hero-note">Literatura, memórias e cultura do brincar.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-orbit" aria-hidden="true"></div>
+        <svg class="hero-sun icon" aria-hidden="true"><use href="#sun"/></svg>
+        <div class="hero-photo">
+          <img src="/assets/images/aquarelada-livro-mesa.webp" alt="Livro Um Dia Diferente, Como Era Antigamente!, ilustrado com Enzo e Valentina e suas brincadeiras" width="1080" height="1350" fetchpriority="high">
+        </div>
+        <div class="book-note"><svg class="icon" aria-hidden="true"><use href="#book"/></svg><span>Um livro.<br><strong>Muitas descobertas.</strong></span></div>
       </div>
     </section>
 
-    <section class="section alt">
-      <div class="section-inner">
-        <div class="section-title">
-          <div>
-            <h2>Experiências que continuam além das páginas.</h2>
-            <p>Cada história é desenvolvida com cuidado para emocionar, divertir e inspirar experiências que podem virar uma brincadeira, uma conversa, uma descoberta ou uma nova memória construída juntos.</p>
-          </div>
-        </div>
-        <div class="grid three">
-          <article class="info-card">
-            <h3>Livros infantis ilustrados</h3>
-            <p>Narrativas visuais pensadas para aproximar crianças e famílias.</p>
-          </article>
-          <article class="info-card">
-            <h3>Brincadeiras que atravessam gerações</h3>
-            <p>Pipa, elástico, pião, amarelinha, cama de gato, carrinho de rolimã, bolinha de gude, corrida de saco e outras memórias da infância.</p>
-          </article>
-          <article class="info-card">
-            <h3>Leitura compartilhada</h3>
-            <p>Historias feitas para abrir conversas, risadas e momentos de presença.</p>
-          </article>
-        </div>
+    <section class="experiences section-shell" aria-labelledby="experiences-title">
+      <div class="story-visual">
+        <img src="/assets/images/aquarelada-historia-quartinho-brincadeiras.webp" alt="Ilustração de Enzo e Valentina descobrindo um quarto cheio de brinquedos e possibilidades" width="1600" height="800" loading="lazy">
+        <span class="story-caption">A curiosidade abre a porta.<br><strong>A turma escolhe os caminhos.</strong></span>
+      </div>
+      <div class="experiences-copy">
+        <p class="eyebrow">Do livro para a vida da turma</p>
+        <h2 id="experiences-title">A história começa na leitura.<br><span>As descobertas vão além.</span></h2>
+        <div class="benefit"><span class="benefit-icon blue"><svg class="icon" aria-hidden="true"><use href="#chat"/></svg></span><div><h3>Mais espaço para se expressar</h3><p>Conversas, desenhos e relatos ampliam as possibilidades de trabalhar a história.</p></div></div>
+        <div class="benefit"><span class="benefit-icon yellow"><svg class="icon" aria-hidden="true"><use href="#sun"/></svg></span><div><h3>Outras infâncias para descobrir</h3><p>Brincadeiras e memórias de pais e avós se tornam novas descobertas para as crianças.</p></div></div>
+        <div class="benefit"><span class="benefit-icon rose"><svg class="icon" aria-hidden="true"><use href="#heart"/></svg></span><div><h3>Famílias dentro da conversa</h3><p>As histórias de casa encontram espaço nas experiências vividas com a turma.</p></div></div>
       </div>
     </section>
 
-    <section class="section tint" id="cadastro">
-      <div class="section-inner">
-        <div class="book-bridge">
-          <h2>Faça parte dos primeiros leitores da Aquarelada.</h2>
-          <p>Cadastre seu e-mail para acompanhar o lançamento de <strong>Um Dia Diferente, Como Era Antigamente!</strong> e receber novidades em primeira mão.</p>
+    <section class="support" aria-labelledby="support-title">
+      <div class="section-shell">
+        <div class="section-heading"><p class="eyebrow">Apoio para tirar as ideias do papel</p><h2 id="support-title">Sua equipe não precisa<br>começar do zero.</h2><p>Materiais para apoiar o planejamento e transformar a inspiração do livro em experiências.</p></div>
+        <div class="resources">
+          <article class="resource"><div class="resource-art resource-art-project"><svg class="icon" aria-hidden="true"><use href="#book"/></svg><span>Uma proposta.<br>Diferentes turmas.</span><span class="resource-tab" aria-hidden="true"></span></div><h3>Projetos e manuais do professor</h3><p>Propostas específicas para Educação Infantil e Fundamental I, respeitando cada etapa.</p></article>
+          <article class="resource"><div class="resource-art resource-art-manual"><img src="/assets/images/supermanual-logo.webp" alt="Super Manual de Brincadeiras" width="760" height="711" loading="lazy"></div><h3>Super Manual de Brincadeiras</h3><p>Um repertório de brincadeiras tradicionais, com instruções, variações e orientações.</p></article>
+          <article class="resource"><div class="resource-art resource-art-guide"><svg class="icon" aria-hidden="true"><use href="#guide"/></svg><span>Da leitura<br>para o brincar.</span><span class="resource-tab" aria-hidden="true"></span></div><h3>Guia para a escola</h3><p>Sugestões de atividades, estações e formas de organização para adaptar à sua realidade.</p></article>
         </div>
-        <form class="capture-box publisher-form" id="publisher-form">
-          <div class="form-grid">
-            <div class="field">
-              <label for="name">Nome</label>
-              <input id="name" name="name" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="message">Mensagem</label>
-              <textarea id="message" name="message" placeholder="Quero receber novidades da Aquarelada"></textarea>
-            </div>
-            <button class="btn primary" type="submit">Cadastrar</button>
-            <p class="form-feedback" id="publisher-form-feedback" aria-live="polite"></p>
-          </div>
-        </form>
+        <p class="support-note"><svg class="icon" aria-hidden="true"><use href="#heart"/></svg> E o projeto pode ganhar um encontro de brincadeiras com as famílias, organizado pela escola.</p>
+        <a class="button button-light" href="#cadastro">Quero conhecer os materiais <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
       </div>
+    </section>
+
+    <section class="adoption section-shell" aria-labelledby="adoption-title">
+      <div class="adoption-heading"><p class="eyebrow">Como funciona a adoção</p><h2 id="adoption-title">Um projeto com espaço<br>para o jeito da sua escola.</h2><img src="/assets/images/aquarelada-livro-capa-aberta.webp" alt="Capa e contracapa do livro físico" width="1080" height="700" loading="lazy"></div>
+      <ol class="steps">
+        <li><span class="step-number">01</span><div><h3>Inclua a obra no planejamento</h3><p>A escola adota o livro e indica um exemplar para cada aluno das turmas participantes.</p></div></li>
+        <li><span class="step-number">02</span><div><h3>Escolha a forma de aquisição</h3><p>Os livros podem ser adquiridos pelas famílias ou pela instituição, conforme as condições de adoção.</p></div></li>
+        <li><span class="step-number">03</span><div><h3>Construa o percurso com a turma</h3><p>Sua equipe define as turmas, o período e as atividades que fazem sentido para o planejamento.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="capture" id="cadastro" aria-labelledby="capture-title">
+      <div class="capture-grid section-shell">
+        <div class="capture-copy"><p class="eyebrow">O próximo capítulo pode ser na sua escola</p><h2 id="capture-title">Vamos levar essa<br><span>história para vocês?</span></h2><p>Conheça o projeto, os materiais de apoio e as condições de adoção para sua escola.</p>
+          <aside class="selection-notice" aria-labelledby="selection-title"><svg class="icon" aria-hidden="true"><use href="#gift"/></svg><div><h3 id="selection-title">Sua escola pode receber um exemplar físico gratuito para avaliação.</h3><p>Algumas escolas serão selecionadas após a análise dos cadastros. O preenchimento do formulário não garante o recebimento do livro.</p></div></aside>
+        </div>
+        <div class="form-card" aria-labelledby="form-title"><span class="form-kicker">Interesse no projeto</span><h3 id="form-title">Conte um pouco<br>sobre a sua escola.</h3>
+          <!-- Área reservada: inserir os campos e a integração após definição do formulário. -->
+          <div class="form-placeholder"><span class="placeholder-icon"><svg class="icon" aria-hidden="true"><use href="#pencil"/></svg></span><strong>Formulário em preparação</strong><p>Em breve, você poderá cadastrar o interesse da sua escola por aqui.</p></div>
+        </div>
+      </div>
+      <footer class="footer section-shell"><img src="/assets/images/aquarelada-logo-alfa.webp" alt="Aquarelada Editora" width="1080" height="250" loading="lazy"><p>Histórias para ler. Experiências para viver junto.</p></footer>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <strong>Aquarelada Editora</strong>
-      <span>Histórias, brincadeiras e memórias para colorir a infância.</span>
-    </div>
-  </footer>
-
-  <script src="/assets/js/escolas.js?v=20261118-1"></script>
+  <div class="mobile-action" id="mobile-action" hidden><a class="button button-primary" href="#cadastro">Quero conhecer o projeto <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
 </body>
 </html>
